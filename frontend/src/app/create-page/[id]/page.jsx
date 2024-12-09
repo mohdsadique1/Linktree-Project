@@ -1,6 +1,7 @@
 'use client'
 import axios from 'axios';
 import { Formik, useFormik } from 'formik';
+import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
@@ -22,32 +23,16 @@ const Createpage = () => {
 
   const formSubmit = (values) => {
     console.log(values);
-
+    axios.put('http://localhost:5000/page/update/' + id, values)
+      .then((result) => {
+        toast.success('page Updated Successfully');
+        // router.back();
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error('Failed to update page');
+      });
   }
-
-  const createForm = useFormik({
-    initialValues: {
-      title: '',
-      cover: '',
-      description: '',
-      image: '',
-      links: ''
-    },
-    onSubmit: (values) => {
-      console.log(values);
-
-      axios.put('http://localhost:5000/page/update/' + id, values)
-        .then((result) => {
-          toast.success('page Updated Successfully');
-          router.back();
-        })
-        .catch((err) => {
-          console.log(err);
-          toast.error('Failed to update page');
-        });
-    },
-    // validationSchema: createSchema
-  });
 
   return (
     <div className="mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
@@ -132,6 +117,10 @@ const Createpage = () => {
                         </label>
                         <input
                           type="file"
+                          name="file"
+                          id="file"
+                          onChange={createForm.handleChange}
+                          value={createForm.values.Image}
 
                           placeholder=""
                           className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
@@ -146,7 +135,7 @@ const Createpage = () => {
                           Links
                         </label>
                         <input
-                          type="links"
+                          type="text"
                           id="links"
                           onChange={createForm.handleChange}
                           value={createForm.values.links}
@@ -181,6 +170,12 @@ const Createpage = () => {
                       >
                         Create Page
                       </button>
+                      <Link
+                        href={'/viewpage/' + id}
+                        className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+                      >
+                        View Page
+                      </Link>
                     </form>
                   }
                 }

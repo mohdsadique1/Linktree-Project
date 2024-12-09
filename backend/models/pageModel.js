@@ -5,7 +5,7 @@ const mySchema = new Schema({
     cover: { type: String, unique: false },
     description: { type: String },
     images: { type: String, unique: false },
-    link: { type: String, unique: false },
+    links: { type: String, unique: false },
     createdAt: { type: Date, default: Date.now }
 });
 
