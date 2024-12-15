@@ -31,19 +31,19 @@ const Login = () => {
   });
 
   return (
-    <div className="mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
+    <div className="bg-gray-800 mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
       <a
         href=""
         className="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10"
       >
-        <img src="sgffs" className="h-10 mr-4" alt="" />
+        <img src="sddv" className="h-10 mr-4" alt="" />
         <span className="self-center text-2xl font-bold whitespace-nowrap">
         </span>
       </a>
       {/* Card */}
-      <div className="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
+      <div className="bg-gray-900 text-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
         <div className="p-6 sm:p-8 lg:p-16 space-y-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl lg:text-3xl font-bold">
             Sign in to platform
           </h2>
         
@@ -52,7 +52,7 @@ const Login = () => {
             <div>
               <label
                 htmlFor="email"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium block mb-2"
               >
                 Your email
               </label>
@@ -62,7 +62,7 @@ const Login = () => {
                 id="email"
                 onChange={loginForm.handleChange}
                 value={loginForm.values.email}
-                className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                 placeholder="name@company.com"
                 required=""
                 aria-describedby='email-error'
@@ -71,7 +71,7 @@ const Login = () => {
             <div>
               <label
                 htmlFor="password"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium block mb-2"
               >
                 Your password
               </label>
@@ -99,7 +99,7 @@ const Login = () => {
                 />
               </div>
               <div className="text-sm ml-3">
-                <label htmlFor="remember" className="font-medium text-gray-900">
+                <label htmlFor="remember" className="font-medium">
                   Remember me
                 </label>
               </div>

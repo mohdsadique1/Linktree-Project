@@ -7,15 +7,17 @@ const Navbar = () => {
             <>
                 {/* ========== HEADER ========== */}
                 <header className="flex flex-wrap  md:justify-start md:flex-nowrap z-50 w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700">
+                 
                     <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between items-center gap-x-1">
-                            <a
-                                className="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white"
+                            <Link
+                                className="flex items-center font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white"
                                 href="/"
                                 aria-label="Brand"
                             >
-                                Brand
-                            </a>
+                                <img src="/Logo-Designing.jpg" className='h-10' alt="" />
+                                Link Tree
+                            </Link>
                             {/* Collapse Button */}
                             <button
                                 type="button"
@@ -93,7 +95,7 @@ const Navbar = () => {
                                                 </svg>
                                                 Home
                                             </Link>
-                                          
+
                                             <Link
                                                 className="p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
                                                 href="/contact"
@@ -159,7 +161,7 @@ const Navbar = () => {
                                                     <path d="M15 18h-5" />
                                                     <path d="M10 6h8v4h-8V6Z" />
                                                 </svg>
-                                                Create Page
+                                                Update Page
                                             </Link>
                                         </div>
                                     </div>

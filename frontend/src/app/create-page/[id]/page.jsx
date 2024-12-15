@@ -6,22 +6,45 @@ import { useParams, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 
-const Createpage = () => {
+const updatepage = () => {
 
   const { id } = useParams();
   const [profileData, setProfileData] = useState(null);
+  const [coverImage, setCoverImage] = useState('');
+  const [logoImage, setLogoImage] = useState('');
 
   const fetchProfileData = async () => {
-    const res = await axios.get('http://localhost:5000/page/getbyid/' + id);
+    const res = await axios.get('http://localhost:5000/page/getbyid/' + id,);
     console.log(res.data);
     setProfileData(res.data);
   }
 
   useEffect(() => {
     fetchProfileData();
-  }, [])
+  }, []);
+
+  const uploadFile = (e, setImage) => {
+    const file = e.target.files[0];
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'Mypreset'); //Folder
+    formData.append('cloud_name', 'dwduh2cgq');   //File
+
+    axios.post('https://api.cloudinary.com/v1_1/dwduh2cgq/image/upload', formData)
+      .then((result) => {
+        console.log(result.data);
+        toast.success('File Uploaded Successfully');
+        setImage(result.data.url);
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Failed to upload file');
+      });
+  }
 
   const formSubmit = (values) => {
+    values.cover = coverImage;
+    values.logo = logoImage;
     console.log(values);
     axios.put('http://localhost:5000/page/update/' + id, values)
       .then((result) => {
@@ -35,12 +58,13 @@ const Createpage = () => {
   }
 
   return (
-    <div className="mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
+    
+    <div className="bg-gray-800 mx-auto md:min-h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
       <a
         href=""
         className="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10"
       >
-        <img src="/images/logo.svg" className="h-10 mr-4" alt="" />
+        <img src="Logo-Designing.jpg" className="h-10 mr-4" alt="" />
         <span className="self-center text-2xl font-bold whitespace-nowrap">
         </span>
       </a>
@@ -84,7 +108,7 @@ const Createpage = () => {
                         </label>
                         <input
                           type="file"
-                          id="cover"
+                          onChange={(e) => uploadFile(e, setCoverImage)}
                           className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                           placeholder=""
                           required=""
@@ -100,7 +124,6 @@ const Createpage = () => {
                         <input
                           type="description"
                           name="description"
-                          id="description"
                           onChange={createForm.handleChange}
                           value={createForm.values.description}
                           placeholder=""
@@ -117,11 +140,7 @@ const Createpage = () => {
                         </label>
                         <input
                           type="file"
-                          name="file"
-                          id="file"
-                          onChange={createForm.handleChange}
-                          value={createForm.values.Image}
-
+                          onChange={(e) => uploadFile(e, setLogoImage)}
                           placeholder=""
                           className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                           required=""
@@ -132,13 +151,98 @@ const Createpage = () => {
                           htmlFor="links"
                           className="text-sm font-medium text-gray-900 block mb-2"
                         >
-                          Links
+                          Facebook
                         </label>
                         <input
                           type="text"
-                          id="links"
+                          id="facebookLink"
                           onChange={createForm.handleChange}
-                          value={createForm.values.links}
+                          value={createForm.values.facebookLink}
+                          placeholder=""
+                          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                          required=""
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="links"
+                          className="text-sm font-medium text-gray-900 block mb-2"
+                        >
+                          X
+                        </label>
+                        <input
+                          type="text"
+                          id="xLink"
+                          onChange={createForm.handleChange}
+                          value={createForm.values.xLink}
+                          placeholder=""
+                          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                          required=""
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="links"
+                          className="text-sm font-medium text-gray-900 block mb-2"
+                        >
+                          Instagram
+                        </label>
+                        <input
+                          type="text"
+                          id="instagramLink"
+                          onChange={createForm.handleChange}
+                          value={createForm.values.instagramLink}
+                          placeholder=""
+                          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                          required=""
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="links"
+                          className="text-sm font-medium text-gray-900 block mb-2"
+                        >
+                          Github
+                        </label>
+                        <input
+                          type="text"
+                          id="githubLink"
+                          onChange={createForm.handleChange}
+                          value={createForm.values.githubLink}
+                          placeholder=""
+                          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                          required=""
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="links"
+                          className="text-sm font-medium text-gray-900 block mb-2"
+                        >
+                          Linkedin
+                        </label>
+                        <input
+                          type="text"
+                          id="linkedinLink"
+                          onChange={createForm.handleChange}
+                          value={createForm.values.linkedinLink}
+                          placeholder=""
+                          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                          required=""
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="links"
+                          className="text-sm font-medium text-gray-900 block mb-2"
+                        >
+                          Email
+                        </label>
+                        <input
+                          type="text"
+                          id="gmailLink"
+                          onChange={createForm.handleChange}
+                          value={createForm.values.gmailLink}
                           placeholder=""
                           className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                           required=""
@@ -155,7 +259,8 @@ const Createpage = () => {
                             required=""
                           />
                         </div>
-                        <div className="text-sm ml-3">
+                       
+                      <div className="text-sm ml-3">
                           <label htmlFor="remember" className="font-medium text-gray-900">
                             I accept the{" "}
                             <a href="#" className="text-teal-500 hover:underline">
@@ -168,7 +273,7 @@ const Createpage = () => {
                         type="submit"
                         className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
                       >
-                        Create Page
+                        Update Page
                       </button>
                       <Link
                         href={'/viewpage/' + id}
@@ -190,4 +295,4 @@ const Createpage = () => {
   )
 }
 
-export default Createpage;
+export default updatepage;
