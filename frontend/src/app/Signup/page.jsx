@@ -58,9 +58,9 @@ const Signup = () => {
   });
 
   return (
-    <div className="mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
+    <div className=" bg-white mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
       <a
-        href=""
+        href="/"
         className="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10"
       >
         <img src="dsfds" className="h-10 mr-4" alt="" />
@@ -68,16 +68,16 @@ const Signup = () => {
         </span>
       </a>
       {/* Card */}
-      <div className="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
+      <div className="bg-white border border-gray-300 shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
         <div className="p-6 sm:p-8 lg:p-16 space-y-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-800">
             Create a Free Account
           </h2>
           <form onSubmit={signupForm.handleSubmit}>
             <div>
               <label
                 htmlFor="name"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium text-gray-800 block mb-2"
               >
                 Your name
               </label>
@@ -102,7 +102,7 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="email"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium text-gray-800 block mb-2"
               >
                 Your email
               </label>
@@ -120,7 +120,7 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="password"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium text-gray-800 block mb-2"
               >
                 Your password
               </label>
@@ -138,7 +138,7 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="confirm-password"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium text-gray-800 block mb-2"
               >
                 Confirm password
               </label>
@@ -160,14 +160,14 @@ const Signup = () => {
                   aria-describedby="remember"
                   name="remember"
                   type="checkbox"
-                  className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-cyan-200 h-4 w-4 rounded"
+                  className="bg-gray-50 border-gray-300 focus:ring-3 mt-2 focus:ring-cyan-200 h-4 w-4 rounded"
                   required=""
                 />
               </div>
               <div className="text-sm ml-3">
-                <label htmlFor="remember" className="font-medium text-gray-900">
-                  I accept the{" "}
-                  <a href="#" className="text-teal-500 hover:underline">
+                <label htmlFor="remember" className="font-medium text-white">
+                  I accept the{" /"}
+                  <a href="#" className="text-indigo-400 hover:underline">
                     Terms and Conditions
                   </a>
                 </label>
@@ -175,13 +175,13 @@ const Signup = () => {
             </div>
             <button
               type="submit"
-              className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+              className="text-white bg-indigo-500 hover:bg-indigo-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-2 py-3 w-full sm:w-auto mt-2 text-center"
             >
               Create account
             </button>
-            <div className="text-sm font-medium text-gray-500">
-              Already have an account?{" "}
-              <Link href="/Login" className="text-teal-500 hover:underline">
+            <div className="text-sm font-medium text-white">
+              Already have an account?{"/ "}
+              <Link href="/Login" className="text-indigo-400 py-4 space-x-px hover:underline mt-2">
                 Login here
               </Link>
             </div>

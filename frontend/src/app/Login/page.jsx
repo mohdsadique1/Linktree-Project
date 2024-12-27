@@ -31,19 +31,19 @@ const Login = () => {
   });
 
   return (
-    <div className="bg-gray-800 mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
+    <div className="bg-white mx-auto md:h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
       <a
         href=""
         className="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10"
       >
-        <img src="sddv" className="h-10 mr-4" alt="" />
+        <img src="Logo-Design" className="h-10 mr-4" alt="" />
         <span className="self-center text-2xl font-bold whitespace-nowrap">
         </span>
       </a>
       {/* Card */}
-      <div className="bg-gray-900 text-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
+      <div className="bg-white text-white border border-gray-300 shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
         <div className="p-6 sm:p-8 lg:p-16 space-y-8">
-          <h2 className="text-2xl lg:text-3xl font-bold">
+          <h2 className="text-2xl lg:text-3xl text-gray-800 font-bold">
             Sign in to platform
           </h2>
         
@@ -52,7 +52,7 @@ const Login = () => {
             <div>
               <label
                 htmlFor="email"
-                className="text-sm font-medium block mb-2"
+                className="text-sm text-gray-800 font-medium block mb-2"
               >
                 Your email
               </label>
@@ -62,7 +62,7 @@ const Login = () => {
                 id="email"
                 onChange={loginForm.handleChange}
                 value={loginForm.values.email}
-                className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                className="bg-gray-50 text-gray-800 border border-gray-300 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                 placeholder="name@company.com"
                 required=""
                 aria-describedby='email-error'
@@ -71,7 +71,7 @@ const Login = () => {
             <div>
               <label
                 htmlFor="password"
-                className="text-sm font-medium block mb-2"
+                className="text-sm text-gray-800 font-medium block mb-2"
               >
                 Your password
               </label>
@@ -105,21 +105,21 @@ const Login = () => {
               </div>
               <Link
                 href="/Login"
-                className="text-sm text-teal-500 hover:underline ml-auto"
+                className="text-sm text-indigo-400 hover:underline ml-auto"
               >
                 Forget Password?
               </Link>
             </div>
             <button
               type="submit"
-              className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+              className="text-white bg-indigo-500 hover:bg-indigo-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
             >
               Login to your account
             </button>
             <div className="grid gap-y-4"></div>
             <div className="text-sm font-medium text-gray-500">
-              Not registered?{" "}
-              <Link href="/Signup" className="text-teal-500 hover:underline">
+              Not registered?{"/ "}
+              <Link href="/Signup" className="text-indigo-400 hover:underline">
                 Create account
               </Link>
             </div>

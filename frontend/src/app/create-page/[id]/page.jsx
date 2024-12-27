@@ -59,9 +59,9 @@ const updatepage = () => {
 
   return (
     
-    <div className="bg-gray-800 mx-auto md:min-h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
+    <div className="bg-white mx-auto md:min-h-screen flex flex-col justify-center items-center px-6 pt-8 pt:mt-0">
       <a
-        href=""
+        href="/"
         className="text-2xl font-semibold flex justify-center items-center mb-8 lg:mb-10"
       >
         <img src="Logo-Designing.jpg" className="h-10 mr-4" alt="" />
@@ -69,7 +69,7 @@ const updatepage = () => {
         </span>
       </a>
       {/* Card */}
-      <div className="bg-white shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
+      <div className="bg-white border border-gray-300 shadow rounded-lg md:mt-0 w-full sm:max-w-screen-sm xl:p-0">
         <div className="p-6 sm:p-8 lg:p-16 space-y-8">
           <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
             Create Page
@@ -263,7 +263,7 @@ const updatepage = () => {
                       <div className="text-sm ml-3">
                           <label htmlFor="remember" className="font-medium text-gray-900">
                             I accept the{" "}
-                            <a href="#" className="text-teal-500 hover:underline">
+                            <a href="#" className="text-indigo-400 hover:underline">
                               Terms and Conditions
                             </a>
                           </label>
@@ -271,13 +271,13 @@ const updatepage = () => {
                       </div>
                       <button
                         type="submit"
-                        className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+                        className="text-white bg-indigo-500 hover:bg-indigo-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
                       >
                         Update Page
                       </button>
                       <Link
                         href={'/viewpage/' + id}
-                        className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-base px-5 py-3 w-full sm:w-auto text-center"
+                        className="text-white bg-indigo-500 hover:bg-indigo-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg ms-5 text-base px-5 py-3 w-full sm:w-auto text-center"
                       >
                         View Page
                       </Link>

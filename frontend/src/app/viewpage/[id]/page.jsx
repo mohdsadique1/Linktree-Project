@@ -1,5 +1,5 @@
 'use client';
-import { IconBrandFacebook, IconBrandGithub, IconBrandGmail, IconBrandInertia, IconBrandInstagram, IconBrandLinkedin, IconBrandX } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandGithub, IconBrandGmail,IconBrandInstagram, IconBrandLinkedin, IconBrandX } from '@tabler/icons-react';
 import axios from 'axios';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -31,7 +31,7 @@ const Viewpage = () => {
           <section className="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
             {/* image - start */}
             <img
-              src={profileData.cover}
+              src={profileData.cover || '#'}
               loading="lazy"
               alt="Photo by Fakurian Design"
               className="absolute inset-0 h-full w-full object-cover object-center"
@@ -56,16 +56,15 @@ const Viewpage = () => {
             {/* image - end */}
             {/* content - start */}
             <div className="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24">
-              <p className="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
-                Very proud to introduce
-              </p>
               <h1 className="mb-8 text-4xl font-bold text-black sm:text-5xl md:mb-12 md:text-6xl">
                 {profileData.title}
               </h1>
+              <p className="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
+                Very proud to introduce about my linktree project
+              </p>
               <p className="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">
-                This is a section of some simple filler text, also known as
-                placeholder text. It shares some characteristics of a real written
-                text but is random.
+              Linktree is widely used for social media profiles, allowing users to share multiple links from a single URL.
+              You can make your Linktree clone more dynamic and visually appealing by adding animations or transitions when users interact with the page.
               </p>
               <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
                 <a
@@ -99,9 +98,8 @@ const Viewpage = () => {
             </h2>
 
             <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-              This is a section of some simple filler text, also known as placeholder
-              text. It shares some characteristics of a real written text but is
-              random or otherwise generated.
+            If you enjoy the content I create and want to support me, you can
+             visit on social media platforms and support me.
             </p>
           </div>
           {/* text - end */}
@@ -213,7 +211,7 @@ const Viewpage = () => {
                
               </div>
               <div>
-                <h3 className="mb-2 text-lg font-semibold md:text-xl">@</h3>
+                <h3 className="mb-2 text-lg font-semibold md:text-xl">@mail</h3>
                 <p className="mb-2 text-gray-500">
                   Sadiquemohd74@gmail.com
                 </p>

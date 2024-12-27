@@ -2,7 +2,7 @@
   {/* Card Section */}
   <div className="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 mx-auto">
     {/* Card */}
-    <div className="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-800">
+    <div className="bg-pink-200 rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-800">
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-800 dark:text-neutral-200">
           Profile

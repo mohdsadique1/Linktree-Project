@@ -15,7 +15,7 @@ const Navbar = () => {
                                 href="/"
                                 aria-label="Brand"
                             >
-                                <img src="/Logo-Designing.jpg" className='h-10' alt="" />
+                                <img src="/Logo-Designing.jpg" className='h-10' alt="/" />
                                 Link Tree
                             </Link>
                             {/* Collapse Button */}

@@ -17,16 +17,15 @@ const contact = () => {
   });
   return (
 
-    <>
+    <div>
       {/* Contact */}
-      <div className="bg-neutral-900">
-        <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
+        <div className="bg-white max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
           {/* Title */}
           <div className="max-w-3xl mb-10 lg:mb-14">
-            <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
+            <h2 className="text-gray-800 font-semibold text-2xl md:text-4xl md:leading-tight">
               Contact us
             </h2>
-            <p className="mt-1 text-neutral-400">
+            <p className="mt-1 text-gray-600">
               Whatever your goal - we will get you there.
             </p>
           </div>
@@ -43,7 +42,7 @@ const contact = () => {
                       id="name"
                       onChange={contactform.handleChange}
                       value={contactform.values.name}
-                      className="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      className="peer p-4 block w-full bg-white border border-gray-800 rounded-lg text-sm text-gray-800 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
         focus:pt-6
         focus:pb-2
         [&:not(:placeholder-shown)]:pt-6
@@ -54,7 +53,7 @@ const contact = () => {
                     />
                     <label
                       htmlFor="hs-tac-input-name"
-                      className="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      className="absolute top-0 start-0 p-4 h-full text-gray-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
           peer-focus:text-xs
           peer-focus:-translate-y-1.5
           peer-focus:text-neutral-400
@@ -73,7 +72,7 @@ const contact = () => {
                       id="email"
                       onChange={contactform.handleChange}
                       value={contactform.values.email}
-                      className="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      className="peer p-4 block w-full bg-white border border-gray-800 rounded-lg text-sm text-gray-800 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
         focus:pt-6
         focus:pb-2
         [&:not(:placeholder-shown)]:pt-6
@@ -103,7 +102,7 @@ const contact = () => {
                       id="email"
                       onChange={contactform.handleChange}
                       value={contactform.values.email}
-                      className="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      className="peer p-4 block w-full bg-white border border-gray-800 rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
         focus:pt-6
         focus:pb-2
         [&:not(:placeholder-shown)]:pt-6
@@ -133,7 +132,7 @@ const contact = () => {
                       id="phone"
                       onChange={contactform.handleChange}
                       value={contactform.values.phone}
-                      className="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      className="peer p-4 block w-full bg-white border border-gray-800 rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
         focus:pt-6
         focus:pb-2
         [&:not(:placeholder-shown)]:pt-6
@@ -162,7 +161,7 @@ const contact = () => {
                       id="message"
                       onChange={contactform.handleChange}
                       value={contactform.values.message}
-                      className="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      className="peer p-4 block w-full bg-white border border-gray-800 rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
         focus:pt-6
         focus:pb-2
         [&:not(:placeholder-shown)]:pt-6
@@ -193,7 +192,7 @@ const contact = () => {
                   </p>
                   <p className="mt-5">
                     <button
-                      className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none"
+                      className="group inline-flex items-center gap-x-2 py-2 px-3 bg-indigo-500 font-medium text-sm text-neutral-800 rounded-full focus:outline-none"
                       type='submit'
                     >
                       Submit
@@ -237,8 +236,8 @@ const contact = () => {
                   <circle cx={12} cy={10} r={3} />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">Our address:</h4>
-                  <address className="mt-1 text-neutral-400 text-sm not-italic">
+                  <h4 className="text-gray-800 font-semibold">Our address:</h4>
+                  <address className="mt-1 text-gray-600 text-sm not-italic">
                     New Market, Gandhi Nagar
                     <br />
                     Basti, Uttar Pradesh
@@ -264,9 +263,9 @@ const contact = () => {
                   <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">Email us:</h4>
+                  <h4 className="text-gray-800 font-semibold">Email us:</h4>
                   <a
-                    className="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
+                    className="mt-1 text-gray-600 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
                     href="#mailto:example@site.co"
                     target="_blank"
                   >
@@ -293,33 +292,12 @@ const contact = () => {
                   <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">We're hiring</h4>
-                  <p className="mt-1 text-neutral-400">
-                    We're thrilled to announce that we're expanding our team and
-                    looking for talented individuals like you to join us.
+                  <h4 className="text-gray-800 font-semibold">Contact</h4>
+                  <p className="mt-1 text-gray-600">
+                   for any kind of help you can call my number 8922020242
                   </p>
                   <p className="mt-2">
-                    <a
-                      className="group inline-flex items-center gap-x-2 font-medium text-sm text-[#ff0] decoration-2 hover:underline focus:outline-none focus:underline"
-                      href="#"
-                    >
-                      Job openings
-                      <svg
-                        className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-hover:translate-x-0 group-focus:translate-x-0.5 group-focus:translate-x-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={24}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                      </svg>
-                    </a>
+                   
                   </p>
                 </div>
               </div>
@@ -330,8 +308,6 @@ const contact = () => {
           {/* End Grid */}
         </div>
       </div>
-      {/* End Contact */}
-    </>
   )
 }
 
